@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumi Beauty | Sign In</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">Lumi</a>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="products.html">Products</a></li>
+        <li><a class="nav__link" href="favorites.html">Favorites</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+        <li><a class="nav__link nav__link--active" href="signin.html">Sign In</a></li>
+        <li><a class="nav__link nav__link--button" href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="auth">
+    <section class="auth__section">
+      <form class="auth-card" action="#" method="post">
+        <h1 class="auth-card__title">Sign In</h1>
+
+        <div class="form-field">
+          <label class="form-field__label" for="email">Email</label>
+          <input class="form-field__input" type="email" id="email" name="email" required minlength="8">
+        </div>
+
+        <div class="form-field">
+          <label class="form-field__label" for="password">Password</label>
+          <input class="form-field__input" type="password" id="password" name="password" required minlength="8">
+        </div>
+
+        <div class="form-check">
+          <input class="form-check__input" type="checkbox" id="remember" name="remember">
+          <label class="form-check__label" for="remember">Remember Me</label>
+        </div>
+
+        <button class="button button--primary auth-card__button" type="submit">Sign In</button>
+
+        <p class="auth-card__text">Do not have an account? <a href="signup.html">Sign Up</a></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copy">Copyright 2026 Lumi Beauty. All rights reserved.</p>
+  </footer>
+</body>
+</html>
