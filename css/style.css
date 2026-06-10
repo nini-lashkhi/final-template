@@ -486,13 +486,18 @@ select {
   gap: 12px;
 }
 
-.footer__social span,
-.footer__copy {
-  color: #eadfd8;
+.footer__social a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer__social a:hover {
+  color: var(--primary-color);
 }
 
 .footer__copy {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: #eadfd8;
   margin: 30px auto 0;
   max-width: 1180px;
   padding-top: 20px;
