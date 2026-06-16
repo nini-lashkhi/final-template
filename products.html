@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lumi Beauty | Products</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/products.js"></script>
 </head>
 
 <body>
@@ -12,12 +13,10 @@
   <header class="site-header">
     <nav class="nav">
       <a class="nav__logo" href="index.html">Lumi</a>
-
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Home</a></li>
         <li><a class="nav__link nav__link--active" href="products.html">Products</a></li>
         <li><a class="nav__link" href="favorites.html">Favorites</a></li>
-        <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li><a class="nav__link" href="signin.html">Sign In</a></li>
         <li><a class="nav__link nav__link--button" href="signup.html">Sign Up</a></li>
       </ul>
@@ -29,203 +28,31 @@
     <section class="page-hero">
       <h1 class="page-hero__title">Discover Our Beauty Collection</h1>
       <p class="page-hero__text">
-        Explore modern beauty products from skincare, body care, makeup, and hair care.
+        Explore modern beauty products from skincare, makeup, fragrance, and self-care.
       </p>
     </section>
 
-    <nav class="category-nav">
-      <a class="category-nav__link" href="#all">All Products</a>
-      <a class="category-nav__link" href="#skincare">Skincare</a>
-      <a class="category-nav__link" href="#body-care">Body Care</a>
-      <a class="category-nav__link" href="#makeup">Makeup</a>
-      <a class="category-nav__link" href="#hair-care">Hair Care</a>
-    </nav>
-
+    <!-- Products section updated later:
+         Product cards are no longer written manually in HTML.
+         JavaScript loads them from an API and adds them here dynamically. -->
     <section class="section" id="all">
       <div class="section__inner">
         <h2 class="section__title">All Products</h2>
-      </div>
-    </section>
 
-    <!-- SKINCARE -->
-    <section class="section" id="skincare">
-      <div class="section__inner">
-        <h2 class="section__title">Skincare</h2>
-
-        <div class="product-grid">
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/skincare1.png" alt="Hydrating Cleanser image">
-            </div>
-            <span class="product-card__category">Skincare</span>
-            <h3 class="product-card__title">Hydrating Cleanser</h3>
-            <p class="product-card__text">Gentle cleanser for daily freshness.</p>
-            <p class="product-card__price">$24</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/skincare2.png" alt="Vitamin C Serum image">
-            </div>
-            <span class="product-card__category">Skincare</span>
-            <h3 class="product-card__title">Vitamin C Serum</h3>
-            <p class="product-card__text">Brightening serum for radiant skin.</p>
-            <p class="product-card__price">$38</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/skincare3.png" alt="Daily Moisturizer image">
-            </div>
-            <span class="product-card__category">Skincare</span>
-            <h3 class="product-card__title">Daily Moisturizer</h3>
-            <p class="product-card__text">Light cream for soft hydration.</p>
-            <p class="product-card__price">$29</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
+        <!-- Search input added later for JavaScript product filtering -->
+        <div class="product-tools">
+          <input id="product-search" class="form-field__input" type="search" placeholder="Search products">
         </div>
-      </div>
-    </section>
 
-    <!-- BODY CARE -->
-    <section class="section section--soft" id="body-care">
-      <div class="section__inner">
-        <h2 class="section__title">Body Care</h2>
-
-        <div class="product-grid">
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/bodycare1.png" alt="Body Lotion image">
-            </div>
-            <span class="product-card__category">Body Care</span>
-            <h3 class="product-card__title">Body Lotion</h3>
-            <p class="product-card__text">Deep hydration for smooth skin.</p>
-            <p class="product-card__price">$22</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/bodycare2.png" alt="Body Scrub image">
-            </div>
-            <span class="product-card__category">Body Care</span>
-            <h3 class="product-card__title">Body Scrub</h3>
-            <p class="product-card__text">Soft scrub for polished skin.</p>
-            <p class="product-card__price">$20</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/bodycare3.png" alt="Shower Gel image">
-            </div>
-            <span class="product-card__category">Body Care</span>
-            <h3 class="product-card__title">Shower Gel</h3>
-            <p class="product-card__text">Gentle wash with a clean scent.</p>
-            <p class="product-card__price">$17</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- MAKEUP -->
-    <section class="section" id="makeup">
-      <div class="section__inner">
-        <h2 class="section__title">Makeup</h2>
-
-        <div class="product-grid">
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/makeup1.png" alt="Foundation image">
-            </div>
-            <span class="product-card__category">Makeup</span>
-            <h3 class="product-card__title">Foundation</h3>
-            <p class="product-card__text">Natural coverage with a smooth finish.</p>
-            <p class="product-card__price">$34</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/makeup2.png" alt="Lip Gloss image">
-            </div>
-            <span class="product-card__category">Makeup</span>
-            <h3 class="product-card__title">Lip Gloss</h3>
-            <p class="product-card__text">Soft shine for everyday beauty.</p>
-            <p class="product-card__price">$18</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/makeup3.png" alt="Mascara image">
-            </div>
-            <span class="product-card__category">Makeup</span>
-            <h3 class="product-card__title">Mascara</h3>
-            <p class="product-card__text">Defined lashes with a light feel.</p>
-            <p class="product-card__price">$19</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- HAIR CARE -->
-    <section class="section section--soft" id="hair-care">
-      <div class="section__inner">
-        <h2 class="section__title">Hair Care</h2>
-
-        <div class="product-grid">
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/haircare1.png" alt="Shampoo image">
-            </div>
-            <span class="product-card__category">Hair Care</span>
-            <h3 class="product-card__title">Shampoo</h3>
-            <p class="product-card__text">Gentle shampoo for clean and soft hair.</p>
-            <p class="product-card__price">$21</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/haircare2.png" alt="Hair Oil image">
-            </div>
-            <span class="product-card__category">Hair Care</span>
-            <h3 class="product-card__title">Hair Oil</h3>
-            <p class="product-card__text">Lightweight oil for shine and smooth ends.</p>
-            <p class="product-card__price">$27</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="assets/haircare3.png" alt="Conditioner image">
-            </div>
-            <span class="product-card__category">Hair Care</span>
-            <h3 class="product-card__title">Conditioner</h3>
-            <p class="product-card__text">Nourishing conditioner for silky hair.</p>
-            <p class="product-card__price">$23</p>
-            <a class="button button--small" href="favorites.html">Add to Favorites</a>
-          </article>
-
+        <!-- JavaScript inserts API product cards inside this container -->
+        <div id="products-list" class="product-grid">
+          <p class="message">Loading products...</p>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
       <div>

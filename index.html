@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lumi Beauty | Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/index.js"></script>
 </head>
 <body>
+
+  <!--  SITE HEADER 
+       Sticky navigation bar shown on every page.
+       Logo on the left, nav links on the right.
+       "Home" is marked active with nav__link--active.        -->
   <header class="site-header">
     <nav class="nav">
       <a class="nav__logo" href="index.html">Lumi</a>
@@ -14,7 +20,6 @@
         <li><a class="nav__link nav__link--active" href="index.html">Home</a></li>
         <li><a class="nav__link" href="products.html">Products</a></li>
         <li><a class="nav__link" href="favorites.html">Favorites</a></li>
-        <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li><a class="nav__link" href="signin.html">Sign In</a></li>
         <li><a class="nav__link nav__link--button" href="signup.html">Sign Up</a></li>
       </ul>
@@ -22,6 +27,8 @@
   </header>
 
   <main>
+
+    <!--  HERO SECTION   -->
     <section class="hero">
       <div class="hero__content">
         <h1 class="hero__title">Glow Naturally with Lumi</h1>
@@ -30,6 +37,7 @@
       </div>
     </section>
 
+    <!--  ABOUT SECTION  -->
     <section class="section about">
       <div class="section__inner">
         <h2 class="section__title">About Lumi</h2>
@@ -44,6 +52,7 @@
       </div>
     </section>
 
+    <!-- BEAUTY CATEGORIES SECTION    -->
     <section class="section section--soft">
       <div class="section__inner">
         <h2 class="section__title">Beauty Categories</h2>
@@ -64,17 +73,19 @@
             <h3 class="category-card__title">Body Care</h3>
             <p class="category-card__text">Soft body essentials for smooth and nourished skin.</p>
           </article>
+
           <article class="category-card">
             <div class="category-card__image">
               <img src="assets/makeup.png" alt="makeup category image">
-                </div>
+            </div>
             <h3 class="category-card__title">Makeup</h3>
             <p class="category-card__text">Elegant products for natural color and polished beauty.</p>
           </article>
+
           <article class="category-card">
             <div class="category-card__image">
               <img src="assets/haircare.png" alt="hair care category image">
-              </div>
+            </div>
             <h3 class="category-card__title">Hair Care</h3>
             <p class="category-card__text">Simple hair care for shine, softness, and healthy-looking hair.</p>
           </article>
@@ -82,11 +93,14 @@
       </div>
     </section>
 
+    <!--  BEST SELLERS SECTION -->
     <section class="section">
       <div class="section__inner">
         <h2 class="section__title">Best Sellers</h2>
 
+       
         <div class="product-grid product-grid--home">
+
           <article class="product-card">
             <div class="product-card__image">
               <img src="assets/skincare1.png" alt="Hydrating Cleanser image">
@@ -96,7 +110,7 @@
             <p class="product-card__text">Gentle daily cleanser for soft and refreshed skin.</p>
             <p class="product-card__price">$24</p>
           </article>
-          
+
           <article class="product-card">
             <div class="product-card__image">
               <img src="assets/bodycare1.png" alt="Body Lotion image">
@@ -106,7 +120,7 @@
             <p class="product-card__text">Creamy body lotion for lasting hydration.</p>
             <p class="product-card__price">$22</p>
           </article>
-          
+
           <article class="product-card">
             <div class="product-card__image">
               <img src="assets/makeup1.png" alt="Foundation image">
@@ -116,7 +130,7 @@
             <p class="product-card__text">Natural coverage with a soft satin finish.</p>
             <p class="product-card__price">$34</p>
           </article>
-         
+
           <article class="product-card">
             <div class="product-card__image">
               <img src="assets/haircare1.png" alt="Shampoo image">
@@ -126,48 +140,58 @@
             <p class="product-card__text">Gentle shampoo for clean and soft hair.</p>
             <p class="product-card__price">$21</p>
           </article>
-          
+
         </div>
       </div>
     </section>
 
+    <!--  BEAUTY TIPS SECTION   -->
     <section class="section section--soft">
+
       <div class="section__inner">
         <h2 class="section__title">Beauty Tips</h2>
         <div class="tip-grid">
+
           <article class="tip-card">
             <h3>Daily Skincare Routine</h3>
             <p>Cleanse gently, apply serum, moisturize, and protect your skin during the day.</p>
           </article>
+
           <article class="tip-card">
             <h3>Hair Care Essentials</h3>
             <p>Use a soft shampoo, condition the lengths, and apply oil to dry ends.</p>
           </article>
+
           <article class="tip-card">
             <h3>Makeup Tips for Natural Glow</h3>
             <p>Use light layers, soft nude tones, and blend well for a fresh finish.</p>
           </article>
+
         </div>
       </div>
     </section>
+
   </main>
 
+  <!--  FOOTER   -->
   <footer class="footer">
     <div class="footer__inner">
+      
       <div>
         <h2 class="footer__logo">Lumi</h2>
         <p>Modern beauty and self-care.</p>
       </div>
-     
-      
-        <div class="footer__social">
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://pinterest.com" target="_blank">Pinterest</a>
-          <a href="https://tiktok.com" target="_blank">TikTok</a>
-        </div>
+
+      <div class="footer__social">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://pinterest.com" target="_blank">Pinterest</a>
+        <a href="https://tiktok.com" target="_blank">TikTok</a>
       </div>
+
     </div>
+
     <p class="footer__copy">Copyright 2026 Lumi Beauty. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
