@@ -24,3 +24,5 @@ lumi-beauty/
 │   └── utils.js
 └── assets/
 ```
+# NETLIFY URL
+https://lumi-beauty.netlify.app/
