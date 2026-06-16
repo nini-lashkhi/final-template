@@ -1,3 +1,10 @@
+/* 
+   STYLE.CSS - Global stylesheet for Lumi Beauty website.
+   All pages use this file for the same colors, spacing, cards, forms, and layout.
+*/
+
+/* ── CSS Custom Properties ───────────────────────────────
+   Main colors and reusable values for the whole website. */
 :root {
   --primary-color: #8b6f5e;
   --secondary-color: #ead8ca;
@@ -13,16 +20,21 @@
   --transition: 0.3s ease;
 }
 
+/* ── Reset ───────────────────────────────────────────────
+   Removes default browser spacing and keeps sizing easier to control. */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Smooth scrolling for anchor links. */
 html {
   scroll-behavior: smooth;
 }
 
+/* ── Base Body Styles ────────────────────────────────────
+   Default font, background, text color, and line height. */
 body {
   background: var(--light-color);
   color: var(--text-color);
@@ -30,17 +42,21 @@ body {
   line-height: 1.6;
 }
 
+/* Removes default underline from links. */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Form elements use the same font as the page. */
 button,
 input,
 select {
   font: inherit;
 }
 
+/* ── Site Header ─────────────────────────────────────────
+   Sticky navigation bar shown on every page. */
 .site-header {
   background: var(--light-color);
   border-bottom: 1px solid var(--border-color);
@@ -49,6 +65,7 @@ select {
   z-index: 10;
 }
 
+/* Navigation layout with logo on the left and links on the right. */
 .nav {
   align-items: center;
   display: flex;
@@ -58,6 +75,7 @@ select {
   padding: 18px var(--spacing);
 }
 
+/* Shared logo style for header and footer. */
 .nav__logo,
 .footer__logo {
   color: var(--dark-color);
@@ -66,6 +84,7 @@ select {
   font-weight: 700;
 }
 
+/* Navigation links arranged in a row. */
 .nav__list {
   align-items: center;
   display: flex;
@@ -73,6 +92,7 @@ select {
   list-style: none;
 }
 
+/* Default navigation link style. */
 .nav__link {
   border-radius: 999px;
   color: var(--muted-color);
@@ -82,12 +102,14 @@ select {
   transition: var(--transition);
 }
 
+/* Active and hover state for navigation links. */
 .nav__link:hover,
 .nav__link--active {
   background: var(--soft-color);
   color: var(--primary-color);
 }
 
+/* Sign Up link styled like a button. */
 .nav__link--button {
   background: var(--dark-color);
   color: var(--light-color);
@@ -98,6 +120,8 @@ select {
   color: var(--light-color);
 }
 
+/* ── Hero Section ────────────────────────────────────────
+   Main homepage banner with centered content. */
 .hero {
   align-items: center;
   background: linear-gradient(135deg, #ffffff, #fbf1eb, #ead8ca);
@@ -112,6 +136,7 @@ select {
   max-width: 760px;
 }
 
+/* Shared heading style. */
 .hero__title,
 .page-hero__title,
 .section__title,
@@ -133,6 +158,8 @@ select {
   max-width: 650px;
 }
 
+/* ── Buttons ─────────────────────────────────────────────
+   Base button style and button variants. */
 .button {
   border: 1px solid var(--dark-color);
   border-radius: 999px;
@@ -172,6 +199,8 @@ select {
   color: var(--light-color);
 }
 
+/* ── Content Sections ────────────────────────────────────
+   Generic section spacing used across the website. */
 .section {
   padding: 72px var(--spacing);
 }
@@ -191,6 +220,8 @@ select {
   text-align: center;
 }
 
+/* ── Card Base Styles ────────────────────────────────────
+   Shared card style for about, category, product, tip, and auth cards. */
 .about__card,
 .category-card,
 .product-card,
@@ -214,6 +245,8 @@ select {
   margin-bottom: 10px;
 }
 
+/* ── Category Grid ───────────────────────────────────────
+   Home page category cards: Skincare, Body Care, Makeup, Hair Care. */
 .category-grid {
   display: grid;
   gap: 22px;
@@ -230,6 +263,15 @@ select {
 .category-card:hover,
 .product-card:hover,
 .tip-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-6px);
+}
+
+/* ── Active Card ─────────────────────────────────────────
+   Applied by JavaScript (index.js) on mouseenter for the home page
+   best sellers grid. Mirrors the hover effect so the JS event has
+   a real visual result. */
+.product-card.active-card {
   box-shadow: var(--shadow);
   transform: translateY(-6px);
 }
@@ -264,6 +306,8 @@ select {
   padding: 0 20px 22px;
 }
 
+/* ── Product Grid ────────────────────────────────────────
+   Used for API products, Favorites page products, and Best Sellers. */
 .product-grid {
   display: grid;
   gap: 22px;
@@ -286,10 +330,10 @@ select {
 
 .product-card__image img,
 .category-card__image img {
-  width: 100%;
+  display: block;
   height: 100%;
   object-fit: cover;
-  display: block;
+  width: 100%;
 }
 
 .product-card__category {
@@ -318,6 +362,37 @@ select {
   margin-top: 12px;
 }
 
+/* ── Product Tools ───────────────────────────────────────
+   Search input added for the JavaScript/API products page. */
+.product-tools {
+  max-width: 520px;
+  margin-bottom: 28px;
+  margin-top: 24px;
+}
+
+/* ── JavaScript Messages ─────────────────────────────────
+   Messages added by JS for loading, errors, and form feedback. */
+.message {
+  font-weight: 600;
+  padding: 16px;
+  text-align: center;
+}
+
+.form-message {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.form-message.success {
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+
+/* ── Tip Grid ────────────────────────────────────────────
+   Home page beauty tips section. */
 .tip-grid {
   display: grid;
   gap: 22px;
@@ -337,6 +412,8 @@ select {
   color: var(--muted-color);
 }
 
+/* ── Page Hero ───────────────────────────────────────────
+   Inner page banner for Products, Favorites, and Contact pages. */
 .page-hero {
   background: var(--soft-color);
   padding: 72px var(--spacing);
@@ -353,36 +430,10 @@ select {
   font-size: 18px;
 }
 
-.category-nav {
-  align-items: center;
-  background: var(--light-color);
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  padding: 18px var(--spacing);
-}
 
-.category-nav__link {
-  border: 1px solid var(--border-color);
-  border-radius: 999px;
-  color: var(--primary-color);
-  font-weight: 700;
-  padding: 9px 16px;
-  transition: var(--transition);
-}
 
-.category-nav__link:hover {
-  background: var(--primary-color);
-  color: var(--light-color);
-}
-
-.form-field__textarea {
-  resize: vertical;
-  min-height: 130px;
-}
-
+/* ── Auth Pages ──────────────────────────────────────────
+   Sign In, Sign Up, and Contact page form layout. */
 .auth {
   align-items: center;
   background: linear-gradient(135deg, #ffffff, #fbf3ed);
@@ -461,6 +512,8 @@ select {
   font-weight: 700;
 }
 
+/* ── Footer ──────────────────────────────────────────────
+   Shared footer with logo, social links, and copyright text. */
 .footer {
   background: var(--dark-color);
   color: var(--light-color);
@@ -504,6 +557,8 @@ select {
   text-align: center;
 }
 
+/* ── Responsive: Mobile ──────────────────────────────────
+   Stacks navigation, footer, and grids on small screens. */
 @media (max-width: 600px) {
   :root {
     --spacing: 18px;
@@ -536,6 +591,8 @@ select {
   }
 }
 
+/* ── Responsive: Desktop ─────────────────────────────────
+   Adds more vertical spacing on larger screens. */
 @media (min-width: 1024px) {
   .section {
     padding-bottom: 88px;

@@ -5,43 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lumi Beauty | Favorites</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/favorites.js"></script>
 </head>
 <body>
+
+  <!-- HEADER / Navigation -->
   <header class="site-header">
     <nav class="nav">
+      <!-- Logo that links back to the home page -->
       <a class="nav__logo" href="index.html">Lumi</a>
+
+      <!-- Navigation link list -->
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Home</a></li>
         <li><a class="nav__link" href="products.html">Products</a></li>
+        <!-- nav__link--active = highlights the current page in the nav -->
         <li><a class="nav__link nav__link--active" href="favorites.html">Favorites</a></li>
-        <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li><a class="nav__link" href="signin.html">Sign In</a></li>
         <li><a class="nav__link nav__link--button" href="signup.html">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
+  <!--  MAIN / Page Content  -->
   <main>
+
+    <!-- Hero section - page title and short description -->
     <section class="page-hero">
       <h1 class="page-hero__title">Your Favorites</h1>
       <p class="page-hero__text">Your saved beauty products are collected here.</p>
     </section>
 
+    <!-- Favorite products section -->
     <section class="section">
       <div class="section__inner">
         <h2 class="section__title">Favorite Products</h2>
 
-      <div class="product-grid" id="favoritesGrid">
-        <p class="empty-favorites">No favorite products yet.</p>
-      </div>
+        <!-- Product grid container -->
+        <div class="product-grid" id="favoritesGrid"></div>
+
       </div>
     </section>
+
   </main>
 
+  <!--  FOOTER  -->
   <footer class="footer">
     <div class="footer__inner">
+      <!-- Brand name displayed in the footer -->
       <h2 class="footer__logo">Lumi</h2>
 
+      <!-- Social media links - target="_blank" opens each in a new tab -->
       <div class="footer__social">
         <a href="https://instagram.com" target="_blank">Instagram</a>
         <a href="https://pinterest.com" target="_blank">Pinterest</a>
@@ -49,7 +63,9 @@
       </div>
     </div>
 
+
     <p class="footer__copy">Copyright 2026 Lumi Beauty. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
